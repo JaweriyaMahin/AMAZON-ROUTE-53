@@ -15,7 +15,7 @@ AMAZON EC2 INSTANCE WITH APACHE WEB SERVER
 ## INSTALL APACHE web server
 
 ### 1 USER DATA SCRIPT 
-```bash
+...bash
 #!/bin/bash
 yum update -y
 yum install -y httpd
@@ -24,10 +24,7 @@ systemctl enable httpd
 
 echo "<h1>Welcome to AWS Cloud</h1><h2>Domain
 Successfully Configured with Route 53</h2>" > /var/
-www/html/index.html
-...
-.............................................................
-
+www/html/index.html...
 
 ## Output
 - Website accessible using the Elastic IP.
