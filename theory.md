@@ -231,27 +231,9 @@ Route 53 can be used with supported S3 website hosting configurations to provide
 | Example: public website         | Example: internal application          |
 | Resolves public domain names    | Resolves private/internal domain names |
 
----
 
-## 12. Real-World Example
 
-Suppose a company has an application running behind an Application Load Balancer.
-
-Instead of asking users to access the application using an IP address or load balancer hostname, the company uses:
-
-`www.company.com`
-
-Route 53 stores the appropriate DNS record and directs users to the load balancer.
-
-The overall architecture is:
-
-**User → [www.company.com](http://www.company.com) → Route 53 → Load Balancer → EC2**
-
-If multiple environments or Regions exist, Route 53 routing policies can be used to control how users are directed to those resources.
-
----
-
-## 13. Important Features
+## 12. Important Features
 
 Key Route 53 features include:
 
@@ -271,88 +253,3 @@ Key Route 53 features include:
 * IP-based routing
 * Integration with AWS services
 
----
-
-## 14. Common Interview Questions
-
-### What is Route 53?
-
-Route 53 is AWS's highly available and scalable DNS service used for domain registration, DNS resolution, traffic routing, and health checking.
-
-### What is a Hosted Zone?
-
-A hosted zone is a container that stores DNS records for a domain.
-
-### What is the difference between public and private hosted zones?
-
-A public hosted zone is used for publicly accessible DNS records, while a private hosted zone is used for DNS resolution within associated VPCs.
-
-### What is an A record?
-
-An A record maps a domain name to an IPv4 address.
-
-### What is a CNAME record?
-
-A CNAME record maps one domain name to another domain name.
-
-### What is an Alias record?
-
-An Alias record is a Route 53 feature that can point a domain to supported AWS resources such as an ELB or CloudFront distribution.
-
-### What is TTL?
-
-TTL specifies how long a DNS response can be cached by DNS resolvers.
-
-### What is Route 53 health checking?
-
-Health checking allows Route 53 to monitor the health of endpoints and use that information for DNS routing decisions.
-
-### What is weighted routing?
-
-Weighted routing distributes DNS traffic between multiple resources according to configured weights.
-
-### What is latency-based routing?
-
-Latency-based routing directs users to the AWS Region that provides the lowest network latency.
-
-### What is failover routing?
-
-Failover routing sends traffic to a primary resource and redirects it to a secondary resource when the primary is unhealthy.
-
----
-
-## 15. Quick Revision
-
-**Route 53** → AWS DNS service
-
-**Hosted Zone** → Container for DNS records
-
-**A Record** → Domain → IPv4
-
-**AAAA Record** → Domain → IPv6
-
-**CNAME** → Domain → Another domain
-
-**MX** → Mail server
-
-**TXT** → Text/verification information
-
-**Alias** → Domain → Supported AWS resource
-
-**TTL** → DNS cache duration
-
-**Health Check** → Monitors endpoint health
-
-**Simple Routing** → Single resource
-
-**Weighted Routing** → Traffic based on weights
-
-**Latency Routing** → Lowest latency
-
-**Failover Routing** → Primary → Secondary
-
-**Geolocation Routing** → Based on user location
-
-**Private Hosted Zone** → Internal/VPC DNS
-
-**Public Hosted Zone** → Public DNS
