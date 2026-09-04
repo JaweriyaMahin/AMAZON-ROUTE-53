@@ -109,9 +109,6 @@ Maps one domain name to another domain name.
 
 `www.example.com → example.com`
 
-### MX Record
-
-Specifies the mail servers responsible for receiving email for a domain.
 
 ### TXT Record
 
@@ -146,28 +143,6 @@ Useful for:
 * Testing
 * Blue/green deployments
 * Gradual traffic migration
-
-### Latency-Based Routing
-
-Routes users to the AWS Region that provides the **lowest latency**.
-
-### Failover Routing
-
-Routes traffic to a primary resource and switches to a secondary resource when the primary becomes unhealthy.
-
-### Geolocation Routing
-
-Routes users based on their geographic location.
-
-### Geoproximity Routing
-
-Routes traffic based on the geographic location of users and resources, with the ability to adjust routing using **bias**.
-
-### Multi-Value Answer Routing
-
-Returns multiple healthy resources in response to a DNS query.
-
-It can be used to improve availability when multiple resources are available.
 
 ### IP-Based Routing
 
